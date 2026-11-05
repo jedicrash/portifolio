@@ -1,0 +1,158 @@
+h1 {
+    color: white;
+    font-size: 50px;
+}
+
+h2 {
+    color: white;
+    font-size: 40px;
+}
+
+p {
+    color: white;
+}
+
+.primeiro {
+    text-align: center;
+    background-image: url(assets/ChatGPT\ Image\ 1\ de\ out.\ de\ 2026\,\ 14_24_27.png);
+    background-color: rgba(34, 32, 32, 0.7);
+    background-blend-mode: color;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-position: center;
+    position: relative;
+
+}
+
+.blur {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+
+    background: linear-gradient(to bottom,
+            transparent 0%,
+            rgba(34, 32, 32, 0.6) 40%,
+            rgba(34, 32, 32, 1) 100%);
+}
+
+body {
+    background-color: rgb(34 32 32);
+    padding-top: 55px;
+}
+
+.card-title {
+    color: white;
+}
+
+.jogo-unity {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    position: relative;
+}
+
+.jogo-unity iframe {
+    width: 250%;
+    height: 300%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.4);
+    transform-origin: top left;
+}
+
+.html {
+    overflow: hidden;
+}
+
+.imagem1 {
+    width: 120%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.divisor {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right,
+            transparent,
+            #777,
+            #e0e0e0,
+            #777,
+            transparent);
+    margin: 60px auto;
+    width: 80%;
+    opacity: 0.8;
+}
+
+.navbarzex {
+    background-color: #292929;
+}
+
+.navbarzex a,
+.navbarzex .nav-link:focus,
+.navbarzex .nav-link.active {
+    color: white;
+}
+
+.navbarzex .nav-link:hover{
+    color: rgb(141, 141, 141);
+    background-color: transparent;
+}
+
+.navbarzex .navbar-brand:hover{
+    color: white;
+    background-color: transparent;
+}
+
+@media (min-width: 992px) {
+    .navbarzex .container-fluid {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+    }
+
+    .navbarzex .navbar-brand {
+        grid-column: 1;
+    }
+
+    .navbarzex .navbar-collapse {
+        grid-column: 2;
+        justify-content: center;
+    }
+
+    .navbarzex .navbar-nav {
+        flex-direction: row;
+    }
+
+    .navbarzex .navbar-toggler {
+        grid-column: 3;
+        justify-self: end;
+    }
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-recarregar {
+    margin-top: auto;
+    align-self: flex-start;
+    background-color: rgb(34 32 32);
+    border-color: rgb(34 32 32);
+    border-width: 2px;
+}
+
+.btn-recarregar:hover {
+    background-color: rgb(70, 70, 70);
+    border-color: rgb(39, 39, 39);
+    border-width: 2px;
+}

@@ -1,0 +1,33 @@
+
+h1 {    
+    color:rgb(254, 255, 255);
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
+}
+.titulo{
+    font-size: 75px;
+}
+p{
+       color:rgb(254, 255, 255);
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+h2{
+       color:rgb(254, 255, 255);
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgb(44, 44, 44);
+
+}
+img{
+    display: block; width: 750px; height: auto; margin-left: auto; margin-right: auto;
+}
+a:link, a:visited{
+    color: rgb(254, 255, 255);
+     
+}

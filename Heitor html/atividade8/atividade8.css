@@ -1,0 +1,36 @@
+.imagem{
+    height: 600px;
+    object-fit: cover;
+    object-position:top;
+}
+
+.imagem2{
+    height: 600px;
+    object-fit: cover;
+    object-position:center;
+}
+
+
+
+@media (max-width: 900px) {
+    .imagem {
+        height: 400px;
+    }
+    .imagem2 {
+        height: 400px;
+    } 
+}
+
+
+@media (max-width: 600px) {
+    .imagem {
+        height: 300px;
+    } 
+    .imagem2 {
+        height: 300px;
+    } 
+}
+.card-img-top{
+    height: 191px;
+    object-fit: cover;
+}

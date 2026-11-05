@@ -1,0 +1,205 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: rgb(15, 28, 29);
+}
+
+form {
+    color: aliceblue;
+}
+
+*{
+    box-sizing:border-box;
+}
+
+.formulario{
+    background-color: rgb(21, 39, 41);
+}
+
+.banner{
+    background-color: rgb(40,56,58);
+    padding:15px;
+    margin-top: 40px;   
+    text-align:center;
+    color:white;
+}
+
+.main{
+    width:100%;
+    padding:20px;
+    color:white;
+    text-align:center;
+}
+
+.main img{
+    width:80%;
+    max-width:900px;
+    height:auto;
+}
+
+.container{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    background-color:rgb(40,56,58);
+    padding:20px;
+}
+
+.left,
+.center,
+.right{
+    background-color:rgb(50,75,77);
+    flex:1;
+    padding:15px;
+    text-align:center;
+    color:white;
+    border-radius:10px;
+}
+
+.left img,
+.center img,
+.right img{
+    width:100%;
+    height:auto;
+    border-radius:5px;
+}
+
+.footer{
+    background-color:rgb(126,152,153);
+    padding:10px;
+    margin-top:15px;
+    text-align:center;
+    color:white;
+}
+
+/* ===== Responsivo ===== */
+
+@media (max-width:900px){
+
+    .container{
+        flex-wrap:wrap;
+    }
+
+    .left,
+    .center,
+    .right{
+        flex:0 0 48%;
+    }
+}
+
+.left,
+.center,
+.right{
+    transition: .3s;
+}
+
+.left:hover,
+.center:hover,
+.right:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.35);
+}
+
+@media (max-width:620px){
+
+    body{
+        margin:10px;
+    }
+
+    .banner{
+        font-size:20px;
+    }
+
+    .main img{
+        width:100%;
+    }
+
+    .main p{
+        font-size:16px;
+    }
+
+    /* remove o <br> no celular */
+    .main br{
+        display:none;
+    }
+    /*
+    O problema é que o seu @media praticamente não faz efeito por alguns motivos:
+
+    Você está usando display: flex no .container, mas dentro dele também usa float. 
+    O float é ignorado em elementos flex.
+    No @media você altera apenas .main e .right, mas quem precisa mudar são .left, .center e .right, que são os itens do Flexbox.
+    Como o .container continua com flex-direction: row, os três cards permanecem lado a lado.
+    O que eu fiz
+
+    Como você já escolheu usar Flexbox, removi todos os float, simplifiquei o CSS e deixei o layout totalmente responsivo.
+    */
+
+   .container{
+        flex-direction:column;
+    }
+
+    .left,
+    .center,
+    .right{
+        width:100%;
+    }
+}
+
+ul.vertical {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: rgb(0, 103, 110);
+    position: fixed;
+    top: 0;
+}
+
+ul.submenu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #eeeeee;
+    position: absolute;
+    display: none;
+}
+
+.vertical li{
+    float: left;
+    width: auto;
+    position: relative;
+}
+
+.submenu li{
+    float: left;
+    width: 200px;
+    position: relative;
+}
+
+.vertical li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.submenu li a{
+    display: block;
+    color: #000000;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.vertical li:hover > ul.submenu{
+    display: block;
+}
+
+.vertical li a:hover {
+    background-color: rgb(0, 76, 82);
+}
+
+.submenu li a:hover {
+    background-color: #cccccc;
+}
